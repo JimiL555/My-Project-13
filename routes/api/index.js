@@ -1,10 +1,11 @@
 const router = require('express').Router();
-const categoryRoutes = require('./category-routes');
-const productRoutes = require('./product-routes');
-const tagRoutes = require('./tag-routes');
+const categoryRoutes = require('./category-routes'); // Import category routes
+const productRoutes = require('./product-routes'); // Import product routes
+const tagRoutes = require('./tag-routes'); // Import tag routes
 
-router.use('/categories', categoryRoutes);
-router.use('/products', productRoutes);
-router.use('/tags', tagRoutes);
+// Use the individual routes with their respective paths
+router.use('/categories', categoryRoutes); // Routes for categories
+router.use('/products', productRoutes); // Routes for products
+router.use('/tags', tagRoutes); // Routes for tags
 
 module.exports = router;
