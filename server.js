@@ -15,3 +15,8 @@ app.use('/api', routes);
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log(`App running on port ${PORT}`));
 });
+
+app.use((req, res, next) => {
+  console.log(`Request made to: ${req.url}`);
+  next();
+});
